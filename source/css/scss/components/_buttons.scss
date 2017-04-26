@@ -1,0 +1,119 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * Button
+ */
+.c-btn {
+	display: inline-block;
+	background: $color-brand-gray-dark;
+	color: $color-white;
+	line-height: 1;
+	padding: 1rem 1.5rem;
+	border: 0;
+	border-radius: $border-radius;
+	text-align: center;
+	transition: background 0.2s ease;
+
+	&:hover, &:focus {
+		@include bg-color-darken($color-brand-gray-dark);
+		color: $color-white;
+	}
+
+	&:active {
+		background: bg-color-darken($color-brand-gray-dark);
+	}
+
+	&.disabled {
+		background: $color-gray-15;
+		color: $color-gray-50;
+	}
+}
+
+.c-btn--primary {
+	background: $color-brand-blue;
+
+	&:hover, &:focus {
+		@include bg-color-darken($color-brand-blue);
+	}
+
+	&.disabled {
+		background: $color-gray-15;
+		color: $color-gray-50;
+	}
+}
+
+.c-btn--negative {
+	//background: $color-utility-negative;
+	@include bg-color-darken($color-utility-negative);
+	&:hover, &:focus {
+		@include bg-color-darken($color-utility-negative);
+	}
+
+	&.disabled {
+		background: $color-gray-15;
+		color: $color-gray-50;
+	}
+}
+
+/**
+ * Small button
+ */
+.c-btn-small {
+	padding: $pad-half;
+}
+
+/**
+ * Large button
+ */
+.c-btn-large {
+	padding: $pad-half;
+	text-transform: uppercase;
+	background: $color-gray-50;
+	font-size: 1.4rem;
+	font-weight: normal;
+}
+
+/**
+ * Text button
+ */
+.c-text-btn {
+	position: relative;
+	background: none;
+    border: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    &:after {
+	    position: absolute;
+		content: "";
+		height: 20px;
+		width: 20px;
+		background: url("../../../images/icon-arrowhead.svg") no-repeat;
+	    top: 7px;
+		right: -26px;
+		transition: all 0.2s ease;
+	}
+
+	&:hover, &:focus {
+	    color: $color-gray-73;
+
+	    &:after {
+		    right: -28px;
+	    }
+    }
+
+    .c-block-media--small & {
+	    font-size: 1rem;
+	}
+}
+
+/**
+ * Button on overlay
+ */
+
+ .c-btn--overlay {
+	 background: $color-gray-35;
+ }
