@@ -14,6 +14,7 @@
 	text-align: center;
 	transition: background 0.2s ease;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	font-weight: 500;
 
 	&:hover, &:focus, &.hover-state {
 		@include bg-color-darken-10($color-brand-gray-dark);
@@ -105,18 +106,11 @@
 }
 
 /**
- * Small button
- */
-.c-btn-small {
-	padding: $pad-half;
-}
-
-/**
  * Large button
  */
 .c-btn-large {
-	padding: $pad-half;
 	font-size: 1.4rem;
+	padding: $pad-half $pad ;
 	font-weight: normal;
 }
 
@@ -135,32 +129,24 @@
 .c-text-btn {
 	position: relative;
 	background: none;
-    border: none;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.2rem;
-
-    &:after {
-	    position: absolute;
-		content: "";
-		height: 20px;
-		width: 20px;
-		background: url("../../../images/icon-arrowhead.svg") no-repeat;
-	    top: 7px;
-		right: -26px;
-		transition: all 0.2s ease;
-	}
+	border: none;
+	font-style: normal;
+	display: inline-block;
+	line-height: 1;
+	padding: 0.8125rem 1rem 0.625rem;
+	border: 0;
+	border-radius: $border-radius;
+	text-align: center;
+	transition: background 0.2s ease;
+	font-weight: 500;
+	color: $color-gray-87;
 
 	&:hover, &:focus {
-	    color: $color-gray-73;
+		background: $color-gray-15;
+	}
 
-	    &:after {
-		    right: -28px;
-	    }
-    }
-
-    .c-block-media--small & {
-	    font-size: 1rem;
+	.c-block-media--small & {
+		font-size: 1rem;
 	}
 }
 
