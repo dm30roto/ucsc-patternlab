@@ -885,38 +885,67 @@ abbr {
  */
 .c-btn {
   display: inline-block;
-  background: #58585b;
-  color: #fff;
   line-height: 1;
-  padding: 1rem 1.5rem;
+  padding: 0.8125rem 1rem 0.625rem;
   border: 0;
   border-radius: 2px;
   text-align: center;
-  transition: background 0.2s ease; }
-  .c-btn:hover, .c-btn:focus {
+  transition: background 0.2s ease;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  .c-btn:hover, .c-btn:focus, .c-btn.hover-state {
     background-color: #3f3f41;
-    color: #fff; }
-  .c-btn:active {
-    background: bg-color-darken(#58585b); }
-  .c-btn.disabled {
+    color: #fff;
+    outline: none; }
+  .c-btn:active, .c-btn.active-state {
+    background-color: #323234;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
+  .c-btn.disabled, .c-btn.disabled-state {
+    background: #d9d9d9;
+    color: #808080;
+    box-shadow: none; }
+
+.c-btn--default {
+  background: #58585b;
+  color: #fff; }
+  .c-btn--default:hover, .c-btn--default:focus, .c-btn--default.hover-state {
+    background-color: #3f3f41; }
+  .c-btn--default:active, .c-btn--default.active-state {
+    background-color: #323234; }
+  .c-btn--default.disabled, .c-btn--default.disabled-state {
     background: #d9d9d9;
     color: #808080; }
 
 .c-btn--primary {
-  background: #049FD9; }
-  .c-btn--primary:hover, .c-btn--primary:focus {
+  background: #049FD9;
+  color: #fff; }
+  .c-btn--primary:hover, .c-btn--primary:focus, .c-btn--primary.hover-state {
     background-color: #037aa7; }
-  .c-btn--primary.disabled {
+  .c-btn--primary:active, .c-btn--primary.active-state {
+    background-color: #03688e; }
+  .c-btn--primary.disabled, .c-btn--primary.disabled-state {
     background: #d9d9d9;
     color: #808080; }
 
 .c-btn--negative {
-  background-color: #cc2300; }
-  .c-btn--negative:hover, .c-btn--negative:focus {
+  background: #ff2c00;
+  color: #fff; }
+  .c-btn--negative:hover, .c-btn--negative:focus, .c-btn--negative.hover-state {
     background-color: #cc2300; }
-  .c-btn--negative.disabled {
+  .c-btn--negative:active, .c-btn--negative.active-state {
+    background-color: #b31f00; }
+  .c-btn--negative.disabled, .c-btn--negative.disabled-state {
     background: #d9d9d9;
     color: #808080; }
+
+.c-btn--positive {
+  background: #149946;
+  color: #fff; }
+  .c-btn--positive:hover, .c-btn--positive:focus, .c-btn--positive.hover-state {
+    background-color: #0e6c31; }
+  .c-btn--positive:active, .c-btn--positive.active-state {
+    background-color: #0b5527; }
+  .c-btn--positive.disabled, .c-btn--positive.disabled-state {
+    background: #d9d9d9; }
 
 /**
  * Small button
@@ -929,10 +958,16 @@ abbr {
  */
 .c-btn-large {
   padding: 0.5em;
-  text-transform: uppercase;
-  background: #808080;
   font-size: 1.4rem;
   font-weight: normal; }
+
+/**
+ * Block level button
+ */
+.c-btn--expand {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%; }
 
 /**
  * Text button
