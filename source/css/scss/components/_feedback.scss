@@ -5,75 +5,94 @@
 /**
  * 1) Feedback consists of components that give information back to the user. Examples include progress bars, progress wheels, etc.
  */
- 
- 
+
+
  /**
  * Progress bar
  */
+
+ /* Polyfill */
+ progress[role]:after {
+ 	background-image: none; /* removes default background from polyfill */
+ }
+
+ /* Ensure fallback text doesn't appear in polyfill */
+ progress[role] strong {
+ 	display: none;
+ }
+
  .c-progress {
-	-webkit-appearance: none;
+   -webkit-appearance: none;
     appearance: none;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    background: #cdcaa2;
+    //border: 1px solid rgba(0, 0, 0, 0.5);
+    border: none;
+    background-size: auto;
+    background: $color-gray-15;
     background-size: auto;
     width: 100%;
     max-width: 300px;
     height: 0.5rem;
-    border-radius: $border-radius;
+    //border-radius: $border-radius;
     margin-bottom: 1em;
+  }
+
+  .c-progress progress:not([value]) {
+     background: $color-gray-15;
+     opacity: 0.7;
+   }
+
+ /**
+ * Webkit specific styling
+ */
+ .c-progress {
+   &::-webkit-progress-value {
+     background-size: 300px 50px;
+   }
+
+   &.start::-webkit-progress-value {
+   	width: 0% !important;
+   	background: $color-gray-15  !important;
+   }
+   &[value]::-webkit-progress-bar {
+     background: $color-gray-15  !important;
+   }
+   &.color-utility-neutral::-webkit-progress-value {
+     background: $color-utility-neutral;
+   }
+   &.color-utility-positive::-webkit-progress-value {
+     background: $color-utility-positive;
+   }
+   &.color-utility-negative::-webkit-progress-value {
+     background: $color-utility-negative;
+   }
  }
 
-.c-progress::-moz-progress-bar {
-	background-color: red;
-	background-image:
-	linear-gradient(
-	  to right, 
-	  red, 
-	  #f06d06, 
-	  rgb(255, 255, 0), 
-	  green
-	);
-	background-size: 300px 50px;
-	border-radius: $border-radius;
-}
+ .anim::-webkit-progress-value {
+ 	-webkit-transition: width 4s ease;
+ 		-o-transition: width 4s ease;
+   	transition: width 4s ease;
+ }
 
-.c-progress::-webkit-progress-value {
-	background-color: red;
-	background-image:
-	linear-gradient(
-	  to right, 
-	  red, 
-	  #f06d06, 
-	  rgb(255, 255, 0), 
-	  green
-	);
-	background-size: 300px 50px;
-	border-radius: $border-radius;
-}
 
- 
-progress[value]::-webkit-progress-bar {
-  border-radius: $border-radius;
-}
+ /**
+ * Mozilla specific styling
+ */
 
-.anim::-moz-progress-bar {
-	-moz-transition: width 4s ease;
-}
-
-.anim::-webkit-progress-value {
-	-webkit-transition: width 4s ease; 
-		-o-transition: width 4s ease; 
-  	transition: width 4s ease; 
-}
-
-.c-progress.start::-moz-progress-bar {
-	width: 0% !important;
-	background: #cdcaa2 !important;
-	
-}
-
-.c-progress.start::-webkit-progress-value {
-	width: 0% !important;
-	background: #cdcaa2 !important;
-	
+.c-progress {
+  &.start::-moz-progress-bar {
+  	width: 0% !important;
+  	background: $color-gray-15 !important;
+  }
+  &.color-utility-neutral::-moz-progress-bar {
+      background: $color-utility-neutral !important;
+  }
+  &.color-utility-positive::-moz-progress-bar {
+      background: $color-utility-positive !important;
+  }
+  &.color-utility-negative::-moz-progress-bar {
+      background: $color-utility-negative !important;
+  }
+  &.anim::-moz-progress-bar {
+  	-moz-transition: width 4s ease;
+  }
 }
