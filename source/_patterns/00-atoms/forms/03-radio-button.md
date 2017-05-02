@@ -11,5 +11,3 @@ Always offer a default selection. Also, always use labels as click targets to ma
 Try to lay out your lists vertically. Only one choice per line is recommended.
 
 Avoid nesting radio buttons with other radio buttons or checkboxes.
-
-More guidelines: [https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc](https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc)

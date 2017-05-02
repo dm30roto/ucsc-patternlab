@@ -413,13 +413,58 @@ input[type="search"]::-webkit-search-decoration {
   content: "";
   position: absolute;
   right: 12px;
-  top: 18px;
+  top: 20px;
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 8px solid #000; }
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #595959; }
 
+/**
+ * Radio button styles
+ * https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc
+ */
+.radio {
+  margin: 0.5rem; }
+  .radio input[type="radio"] {
+    position: absolute;
+    opacity: 0; }
+    .radio input[type="radio"] + .radio-label:before {
+      content: '';
+      background: #d9d9d9;
+      border-radius: 100%;
+      border: 1px solid #a5a5a5;
+      display: inline-block;
+      width: 1.2em;
+      height: 1.2em;
+      position: relative;
+      top: 0;
+      margin-right: 1em;
+      vertical-align: top;
+      cursor: pointer;
+      text-align: center;
+      transition: all 250ms ease; }
+    .radio input[type="radio"]:checked + .radio-label:before {
+      background-color: #049FD9;
+      box-shadow: inset 0 0 0 4px #f7f9f9; }
+    .radio input[type="radio"]:focus + .radio-label:before {
+      outline: none;
+      border-color: #049FD9; }
+    .radio input[type="radio"]:disabled + .radio-label:before {
+      box-shadow: inset 0 0 0 4px #f7f9f9;
+      border-color: #a5a5a5;
+      background: #d9d9d9; }
+    .radio input[type="radio"] + .radio-label:empty:before {
+      margin-right: 0; }
+
+/**
+ * Checkbox styles
+ * https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc
+ */
+/**
+  * Toggle styles
+  * https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc
+  */
 /*------------------------------------*    #GLOBAL CLASSES
 \*------------------------------------*/
 /**
