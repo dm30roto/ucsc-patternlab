@@ -38,7 +38,12 @@ input, textarea {
 	width: 100%;
 	border: 1px solid $color-gray-35;
 	border-radius: $border-radius;
-	padding: 1rem;
+	padding: $pad-three-quarters;
+	font-size: $font-size-med;
+
+	&::placeholder {
+		color: $color-gray-65;
+	}
 }
 
 /**
@@ -47,6 +52,11 @@ input, textarea {
  */
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
 	-webkit-appearance: none;
+	&:focus {
+		outline: none;
+  	box-shadow: 0 0 2px $color-brand-blue;
+  	border: 1px solid $color-brand-blue;
+	}
 }
 
 /**

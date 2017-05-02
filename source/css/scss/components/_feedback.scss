@@ -74,7 +74,6 @@
    	transition: width 4s ease;
  }
 
-
  /**
  * Mozilla specific styling
  */
@@ -96,4 +95,41 @@
   &.anim::-moz-progress-bar {
   	-moz-transition: width 4s ease;
   }
+}
+
+/**
+* Spinner
+*/
+.loader {
+  border: 8px solid $color-gray-15;
+  border-radius: 50%;
+  border-top: 8px solid $color-utility-neutral;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.loader-small {
+  border-width: 4px;
+  border-top-width: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+.loader-large {
+  border-width: 8px;
+  border-top-width: 8px;
+  width: 120px;
+  height: 120px;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

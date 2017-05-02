@@ -350,7 +350,10 @@ input, textarea {
   width: 100%;
   border: 1px solid #a5a5a5;
   border-radius: 2px;
-  padding: 1rem; }
+  padding: 0.75em;
+  font-size: 1rem; }
+  input::placeholder, textarea::placeholder {
+    color: #595959; }
 
 /**
  * Input areas base styles
@@ -358,6 +361,10 @@ input, textarea {
  */
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
   -webkit-appearance: none; }
+  input[type=text]:focus, input[type=search]:focus, input[type=url]:focus, input[type=number]:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 2px #049FD9;
+    border: 1px solid #049FD9; }
 
 /**
  * Button/Submit button base styles
@@ -1104,6 +1111,13 @@ abbr {
 /*------------------------------------*    #FORMS
 \*------------------------------------*/
 /**
+ * Guide on designing good forms:
+ * https://uxplanet.org/designing-perfect-text-field-clarity-accessibility-and-user-effort-d03c1e26004b
+ * https://www.nngroup.com/articles/web-form-design/
+ * https://www.amazon.com/dp/B004VFUP2I/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=3HL4UMCUYPBTO&coliid=I2VFXTD0C3NH6V
+ * https://www.amazon.com/dp/1558607102?tag=useitcomusablein
+ */
+/**
  * Search form
  */
 .c-search-form {
@@ -1783,6 +1797,7 @@ abbr {
  */
 /**
  * Progress bar
+ * In depth on styling HTML5 progress bars - https://css-tricks.com/html5-progress-element/ , https://css-tricks.com/html5-progress-element/
  */
 /* Polyfill */
 progress[role]:after {
@@ -1854,6 +1869,42 @@ progress[role] strong {
 
 .c-progress.anim::-moz-progress-bar {
   -moz-transition: width 4s ease; }
+
+/**
+* Spinner
+*/
+.loader {
+  border: 8px solid #d9d9d9;
+  border-radius: 50%;
+  border-top: 8px solid #0776A0;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite; }
+
+.loader-small {
+  border-width: 4px;
+  border-top-width: 4px;
+  width: 40px;
+  height: 40px; }
+
+.loader-large {
+  border-width: 8px;
+  border-top-width: 8px;
+  width: 120px;
+  height: 120px; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 /*------------------------------------*    $LAYOUT
 \*------------------------------------*/
