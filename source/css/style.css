@@ -431,7 +431,7 @@ input[type="search"]::-webkit-search-decoration {
     opacity: 0; }
     .radio input[type="radio"] + .radio-label:before {
       content: '';
-      background: #d9d9d9;
+      background: #f7f9f9;
       border-radius: 100%;
       border: 1px solid #a5a5a5;
       display: inline-block;
@@ -451,9 +451,13 @@ input[type="search"]::-webkit-search-decoration {
       outline: none;
       border-color: #049FD9; }
     .radio input[type="radio"]:disabled + .radio-label:before {
-      box-shadow: inset 0 0 0 4px #f7f9f9;
+      box-shadow: inset 0 0 0 4px #d9d9d9;
       border-color: #a5a5a5;
       background: #d9d9d9; }
+    .radio input[type="radio"]:disabled:checked {
+      box-shadow: inset 0 0 0 4px red;
+      border-color: #a5a5a5;
+      background: #f7f9f9; }
     .radio input[type="radio"] + .radio-label:empty:before {
       margin-right: 0; }
 
