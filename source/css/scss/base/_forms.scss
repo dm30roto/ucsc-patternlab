@@ -34,7 +34,7 @@ button, input, select, textarea {
  * Input and text area base styles
  * 1) Width entire container, gray border, padding
  */
-input, textarea {
+input, textarea, .dropdown select {
 	width: 100%;
 	border: 1px solid $color-gray-35;
 	border-radius: $border-radius;
@@ -44,6 +44,12 @@ input, textarea {
 	&::placeholder {
 		color: $color-gray-65;
 	}
+
+	&:focus {
+		outline: none;
+  	box-shadow: 0 0 2px $color-brand-blue;
+  	border: 1px solid $color-brand-blue;
+	}
 }
 
 /**
@@ -52,11 +58,6 @@ input, textarea {
  */
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
 	-webkit-appearance: none;
-	&:focus {
-		outline: none;
-  	box-shadow: 0 0 2px $color-brand-blue;
-  	border: 1px solid $color-brand-blue;
-	}
 }
 
 /**
@@ -84,4 +85,38 @@ input[type="radio"] {
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
+}
+
+/**
+* Select base styles
+* https://uxplanet.org/ux-design-drop-downs-in-forms-c6943ec30037
+*/
+.dropdown select {
+  background:transparent;
+	width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+.dropdown{
+	overflow: hidden;
+	background: no-repeat right $color-white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 18px;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 8px solid $color-black;
 }
