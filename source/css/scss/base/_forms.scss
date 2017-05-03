@@ -220,7 +220,7 @@ input[type="search"]::-webkit-search-decoration {
    display: block;
    width: 20px;
    height: 20px;
-   border: 2px solid $color-brand-blue;
+   border: 2px solid $color-gray-35;
    position: absolute;
    left: 0;
    top: 0;
@@ -235,6 +235,7 @@ input[type="search"]::-webkit-search-decoration {
    left: 5px;
    border-radius: 0;
    opacity: 1;
+	 border: 2px solid $color-brand-blue;
    border-top-color: transparent;
    border-left-color: transparent;
    -webkit-transform: rotate(45deg);
