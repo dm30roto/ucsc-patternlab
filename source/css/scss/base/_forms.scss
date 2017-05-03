@@ -47,8 +47,8 @@ input, textarea, .dropdown select {
 
 	&:focus {
 		outline: none;
-  	box-shadow: 0 0 2px $color-brand-blue;
-  	border: 1px solid $color-brand-blue;
+  	box-shadow: 0 0 2px $color-utility-neutral;
+  	border: 1px solid $color-utility-neutral;
 	}
 }
 
@@ -151,7 +151,7 @@ input[type="search"]::-webkit-search-decoration {
     &:checked {
       + .radio-label {
         &:before {
-          background-color: $color-brand-blue;
+          background-color: $color-utility-neutral;
           box-shadow: inset 0 0 0 4px $color-gray-02;
         }
       }
@@ -160,7 +160,7 @@ input[type="search"]::-webkit-search-decoration {
       + .radio-label {
         &:before {
           outline: none;
-          border-color: $color-brand-blue;
+          border-color: $color-utility-neutral;
         }
       }
     }
@@ -235,7 +235,7 @@ input[type="search"]::-webkit-search-decoration {
    left: 5px;
    border-radius: 0;
    opacity: 1;
-	 border: 2px solid $color-brand-blue;
+	 border: 2px solid $color-utility-neutral;
    border-top-color: transparent;
    border-left-color: transparent;
    -webkit-transform: rotate(45deg);
@@ -291,11 +291,11 @@ input[type="search"]::-webkit-search-decoration {
 	}
 
 	input:checked + .slider {
-	  background-color: $color-brand-blue;
+	  background-color: $color-utility-neutral;
 	}
 
 	input:focus + .slider {
-	  box-shadow: 0 0 1px $color-brand-blue;
+	  box-shadow: 0 0 1px $color-utility-neutral;
 	}
 
 	input:checked + .slider:before {
