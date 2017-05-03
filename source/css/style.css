@@ -353,7 +353,7 @@ input, textarea, .dropdown select {
   padding: 0.75em;
   font-size: 1rem; }
   input::placeholder, textarea::placeholder, .dropdown select::placeholder {
-    color: #595959; }
+    color: #a5a5a5; }
   input:focus, textarea:focus, .dropdown select:focus {
     outline: none;
     box-shadow: 0 0 2px #0776A0;
